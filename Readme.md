@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Maksim Kostin](https://up.htmlacademy.ru/htmlcss/25/user/219528).
-* Наставник: `Неизвестно`.
+* Наставник: [Рафаэль Гулиев](https://htmlacademy.ru/profile/thundercat).
 
 ---
 
