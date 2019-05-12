@@ -29,7 +29,52 @@
 
     <section class="filters">
       <h2 class="visually-hidden">Фильтр шаблонов</h2>
-      <!-- Здесь будут формы -->
+      <form class="filters-form" method="get">
+        <!-- Здесь будет верхняя часть форм -->
+        <fieldset>
+          <legend>Сетка:</legend>
+          <ul class="grid-type-list">
+            <li class="grid-type-option">
+              <input class="visually-hidden" id="grid-type-adaptive" type="radio" name="grid-type" value="adaptive" checked>
+              <label for="grid-type-adaptive">Адаптивная</label>
+            </li>
+            <li class="grid-type-option">
+              <input class="visually-hidden" id="grid-type-fixed" type="radio" name="grid-type" value="fixed">
+              <label for="grid-type-fixed">Фиксированная</label>
+            </li>
+            <li class="grid-type-option">
+              <input class="visually-hidden" id="grid-type-responsive" type="radio" name="grid-type" value="responsive">
+              <label for="grid-type-responsive">Резиновая</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>Особенности:</legend>
+          <ul class="features-list">
+            <li class="features-option">
+              <input class="visually-hidden" id="features-slider" type="checkbox" name="features-slider" checked>
+              <label for="features-slider">Слайдер</label>
+            </li>
+            <li class="features-option">
+              <input class="visually-hidden" id="features-advantages" type="checkbox" name="features-advantages">
+              <label for="features-advantages">Блок преимуществ</label>
+            </li>
+            <li class="features-option">
+              <input class="visually-hidden" id="features-news" type="checkbox" name="features-news" checked>
+              <label for="features-news">Новости</label>
+            </li>
+            <li class="features-option">
+              <input class="visually-hidden" id="features-gallery" type="checkbox" name="features-gallery">
+              <label for="features-gallery">Галерея</label>
+            </li>
+            <li class="features-option">
+              <input class="visually-hidden" id="features-basket" type="checkbox" name="features-basket">
+              <label for="features-basket">Корзина</label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="filters-button" type="submit">Показать</button>
+      </form>
     </section>
 
     <section class="catalog">
@@ -109,9 +154,9 @@
   <footer class="main-footer">
     <div class="footer-social">
       <ul class="footer-social-list">
-        <li class="footer-social-item"><a class="social-button" href="#">Вконтакте</a></li>
-        <li class="footer-social-item"><a class="social-button" href="#">Фейсбук</a></li>
-        <li class="footer-social-item"><a class="social-button" href="#">Инстаграм</a></li>
+        <li class="footer-social-item"><a class="social-button" href="#" target="_blank">Вконтакте</a></li>
+        <li class="footer-social-item"><a class="social-button" href="#" target="_blank">Фейсбук</a></li>
+        <li class="footer-social-item"><a class="social-button" href="#" target="_blank">Инстаграм</a></li>
       </ul>
     </div>
     <div class="promo">
