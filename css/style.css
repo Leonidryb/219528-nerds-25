@@ -28,6 +28,7 @@ a {
 
 .button {
   font: inherit;
+  font-weight: 500;
 
   text-align: center;
   color: #ffffff;
@@ -50,14 +51,16 @@ a {
   box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
 }
  /*------------------------------ Header style --------------------------------  */
+.main-header {
+  background-color: #eeeeee;
+}
+
 .main-navigation {
   font-size: 16px;
   line-height: 30px;
   font-weight: 500;
   color: #000000;
   text-transform: uppercase;
-
-  background-color: #eeeeee;
  }
 
 .site-navigation,
@@ -80,9 +83,7 @@ a {
 }
 
 .site-navigation a:hover,
-.site-navigation a:focus,
-.user-navigation a:hover,
-.user-navigation a:focus {
+.user-navigation a:hover {
   color: #fb565a;
 }
 
@@ -91,10 +92,6 @@ a {
   color:rgba(0, 0, 0, 0.3);
 }
 /*------------------------------ Slider style --------------------------------  */
-.advantages-slider {
-  background-color: #eeeeee;
-}
-
 .slider-item p:first-of-type {
   font-size: 55px;
   line-height: 55px;
@@ -301,7 +298,153 @@ a {
 .feedback-form label {
   line-height: 18px;
   font-weight: 700;
-  color: #000000;
+  color: #00000;
 }
+
+
 /*------------------------------ Catalog style --------------------------------  */
 /*-----------------------------------------------------------------------------  */
+.page-title {
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+  color: #000000;
+}
+/*------------------------------ Sorting style --------------------------------  */
+.sorting p {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.sorting a {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.sorting a:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.sorting a:active,
+.sorting a:focus {
+  color: #000000;
+}
+/*------------------------------ Filters style --------------------------------  */
+.filters legend {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.filters fieldset {
+  border: none;
+}
+
+.filters ul {
+  line-height: 20px;
+  list-style: none;
+}
+
+.outputarea {
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
+.outputarea output {
+  background-color: #eeeeee;
+}
+
+.filters-button {
+  color: #000000;
+  background-color: #eeeeee;
+}
+
+.filters-button:hover,
+.filters-button:focus {
+  background-color: #dfdfdf;
+}
+
+.filters-button:active {
+  color: #000000;
+  background-color: #d5d5d5;
+  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
+}
+/*------------------------------ Catalog style --------------------------------  */
+.catalog-list {
+  list-style: none;
+}
+
+.catalog-item-title {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.catalog-item > a {
+  color: #000000;
+}
+
+.catalog-item > a:hover,
+.catalog-item > a:focus {
+  color: #fb565a;
+}
+
+.catalog-item > a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.catalog-item-info {
+  line-height: 18px;
+  color: #666666;
+}
+/*------------------------------ Pagination style --------------------------------  */
+.pagination-list {
+  list-style: none;
+}
+
+.pagination-item-link {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #000000;
+
+  background-color: #eeeeee;
+}
+
+.pagination-item-link:hover {
+  background-color: #dfdfdf;
+}
+
+.pagination-item-link:active {
+  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
+  background-color: #d5d5d5;
+}
+
+.pagination-item-link:focus {
+  border: solid 3px #dbdbdb;
+}
+
+.button-pagination {
+  color: #000000;
+  background-color: #eeeeee;
+}
+
+.button-pagination:hover,
+.button-pagination:focus {
+  background-color: #dfdfdf;
+}
+
+.button-pagination:active {
+  color: #000000;
+  background-color: #d5d5d5;
+  box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
+}

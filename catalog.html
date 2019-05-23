@@ -25,19 +25,19 @@
         <li class="user-navigation-item user-basket"><a href="#">Корзина</a></li>
       </ul>
     </nav>
+    <h1 class="page-title">Магазин готовых шаблонов</h1>
   </header>
 
   <main class="container">
-    <h1 class="page-title">Магазин готовых шаблонов</h1>
 
     <section class="sorting">
       <h2 class="visually-hidden">Сортировка шаблонов</h2>
       <p>Сортировать:</p>
-      <button class="sort-button sort-price" type="button">По цене</button>
-      <button class="sort-button sort-type" type="button">По типу</button>
-      <button class="sort-button sort-name" type="button">По названию</button>
-      <button class="sort-button sort-descending" type="button">По убыванию</button>
-      <button class="sort-button sort-ascending" type="button">По возрастанию</button>
+      <a class="sort-button sort-price" href="#">По цене</a>
+      <a class="sort-button sort-type" href="#">По типу</a>
+      <a class="sort-button sort-name" href="#">По названию</a>
+      <a class="sort-button sort-descending" href="#">По убыванию</a>
+      <a class="sort-button sort-ascending" href="#">По возрастанию</a>
     </section>
 
     <section class="filters">
@@ -56,9 +56,9 @@
             </div>
           </div>
           <div class="outputarea">
-            <label for="low-price-out">цена от</label>
+            <label for="low-price-out"><span class="visually-hidden">цена</span> от</label>
             <output id="low-price-out" name="high-price-value">0</output>
-            <label for="high-price-out">цена до</label>
+            <label for="high-price-out"><span class="visually-hidden">цена</span> до</label>
             <output id="high-price-out" name="high-price-value">15 000</output>
           </div>
         </fieldset>
@@ -104,7 +104,7 @@
             </li>
           </ul>
         </fieldset>
-        <button class="filters-button" type="submit">Показать</button>
+        <button class="button filters-button" type="submit">Показать</button>
       </form>
     </section>
 
@@ -190,7 +190,7 @@
       <li class="pagination-item"><a class="pagination-item-link curent" href="#" aria-label="Страница каталога шаблонов 1">1</a></li>
       <li class="pagination-item"><a class="pagination-item-link" href="#" aria-label="Страница каталога шаблонов 2">2</a></li>
       <li class="pagination-item"><a class="pagination-item-link" href="#" aria-label="Страница каталога шаблонов 3">3</a></li>
-      <li class="pagination-item next"><a class="pagination-item-link" href="#">Следующая</a></li>
+      <li class="pagination-item next"><a class="button button-pagination" href="#">Следующая</a></li>
     </ul>
 
     <section class="map">
@@ -204,7 +204,7 @@
         <address>
           191186, Санкт-Петербург,<br>
           ул. Б. Конюшенная, д. 19/8<br>
-          тел. <a href="tel:+78122757575">+7 (812) 275-75-75</a>
+          тел. <a class="tel-link" href="tel:+78122757575">+7 (812) 275-75-75</a>
         </address>
         <a href="#" class="button feedback-link">Напишите нам</a>
       </section>
