@@ -275,6 +275,10 @@ a {
   color: #444444;
 }
 /*------------------------------ Modal-feedback style --------------------------------  */
+.modal-feedback {
+  display: none;
+}
+
 .modal-feedbak h2 {
   font-size: 45px;
   line-height: 45px;
