@@ -48,6 +48,10 @@ a {
 }
 
 .button {
+  display: block;
+  width: 240px;
+  padding: 13px 0;
+
   font: inherit;
   font-weight: 500;
 
@@ -58,6 +62,7 @@ a {
 
   background-color: #fb565a;
   border: none;
+  border-radius: 3px;
 }
 
 .button:hover,
@@ -76,6 +81,7 @@ a {
   width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  box-sizing: border-box;
 }
 
  /*------------------------------ Header style --------------------------------  */
@@ -142,12 +148,141 @@ a {
   color:rgba(0, 0, 0, 0.3);
 }
 /*------------------------------ Slider style --------------------------------  */
+.advantages-slider {
+  position: relative;
+}
+
 .slider-item p:first-of-type {
+  max-width: 600px;
+  margin: 0;
+  margin-bottom: 27px;
+
   font-size: 55px;
   line-height: 55px;
   font-weight: 500;
   color: #000000;
 }
+
+.slider-item p:nth-of-type(2) {
+  max-width: 430px;
+  margin: 0;
+  margin-bottom: 38px;
+}
+
+.slider-item {
+  padding: 78px 0 80px 0;
+}
+
+.slide-1,
+.slide-2,
+.slide-3 {
+  display: none;
+}
+
+.slide-1 {
+  background-image: url("../img/slide-picture-1.png");
+  background-repeat: no-repeat;
+  background-position: 93% 18px;
+}
+
+.slide-2 {
+  background-image: url("../img/slide-picture-2.png");
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+}
+
+.slide-3 {
+  background-image: url("../img/slide-picture-3.png");
+  background-repeat: no-repeat;
+  background-position: 100% 20px;
+}
+
+.slider-controls {
+  position: absolute;
+  left: 50%;
+  bottom: 104px;
+  z-index: 100;
+
+  width: 160px;
+  height: 18px;
+
+  text-align: center;
+  font-size: 0;
+  transform: translateX(-50%);
+}
+
+.slider-controls label {
+  position: relative;
+
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  padding: 8px;
+
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-controls label::after {
+  content: "";
+
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 1;
+
+  width: 18px;
+  height: 18px;
+
+  background: #ffffff;
+
+  border-radius: 50%;
+}
+
+#product-1:checked ~ .slide-1 {
+  display: block;
+}
+
+#product-2:checked ~ .slide-2 {
+  display: block;
+}
+
+#product-3:checked ~ .slide-3 {
+  display: block;
+}
+
+#product-1:checked ~ .slider-controls .slider-controls-item--1::before,
+#product-2:checked ~ .slider-controls .slider-controls-item--2::before,
+#product-3:checked ~ .slider-controls .slider-controls-item--3::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  width: 4px;
+  height: 4px;
+  margin: -4px;
+  background-color: inherit;
+  border: 2px solid #c1c1c1;
+  border-radius: 50%;
+}
+
+/* .slider-controls .active::before {
+  content: "";
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+
+  width: 4px;
+  height: 4px;
+  margin: -4px;
+
+  background-color: inherit;
+  border: 2px solid #c1c1c1;
+  border-radius: 50%;
+} */
 /*------------------------------ Products style --------------------------------  */
 .products {
   border-bottom: 2px solid #eeeeee;
