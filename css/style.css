@@ -28,7 +28,7 @@ body > * > * > * {
   background-color: rgba(0, 0, 255, 0.3);
 }
 
-body > * > * > * > * {
+/* body > * > * > * > * {
   background-color: rgba(255, 0, 255, 0.3);
 } */
 
@@ -266,23 +266,6 @@ a {
   border: 2px solid #c1c1c1;
   border-radius: 50%;
 }
-
-/* .slider-controls .active::before {
-  content: "";
-
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  z-index: 2;
-
-  width: 4px;
-  height: 4px;
-  margin: -4px;
-
-  background-color: inherit;
-  border: 2px solid #c1c1c1;
-  border-radius: 50%;
-} */
 /*------------------------------ Products style --------------------------------  */
 .products {
   border-bottom: 2px solid #eeeeee;
@@ -340,8 +323,15 @@ a {
 }
 /*------------------------------ About-studio style --------------------------------  */
 .about-studio {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  min-height: 525px;
   border-bottom: 2px solid #eeeeee;
-  padding-bottom: 75px;
+}
+
+.about-wrapper:nth-of-type(1) {
+  width: 660px;
 }
 
 .about-studio p:nth-of-type(1) {
@@ -392,7 +382,7 @@ a {
 .clients {
   border-bottom: 2px solid #eeeeee;
   padding-top: 45px;
-  padding-bottom: 45px;
+  padding-bottom: 40px;
   margin-bottom: 80px;
 }
 
@@ -428,7 +418,20 @@ a {
 .clients-item a:active {
   opacity: 0.1;
 }
+/*------------------------------ Map style --------------------------------  */
+.map {
+  position: relative;
+}
 /*------------------------------ Main-contacts style --------------------------------  */
+.main-contacts {
+  position: absolute;
+  top: 54px;
+  left: 0;
+  width: 319px;
+  min-height: 308px;
+  background-color: #ffffff;
+}
+
 .main-contacts p {
   font-size: 18px;
   line-height: 30px;
@@ -457,8 +460,23 @@ a {
   color:rgba(0, 0, 0, 0.3);
 }
 /*------------------------------ Main-footer style --------------------------------  */
+.main-footer {
+  padding-top: 70px;
+}
+
+.main-footer .container {
+  display: flex;
+}
+
+.footer-social {
+  width: 260px;
+  margin-right: 140px;
+}
+
 .footer-social-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .social-button {
