@@ -16,7 +16,7 @@ body {
   background-color: #ffffff;
 }
 
-/* body > * {
+ /* body > * {
   background-color: rgba(255, 0, 0, 0.3);
 }
 
@@ -24,11 +24,11 @@ body > * > * {
   background-color: rgba(0, 255, 0, 0.3);
 }
 
-body > * > * > * {
+ body > * > * > * {
   background-color: rgba(0, 0, 255, 0.3);
 }
 
-/* body > * > * > * > * {
+ body > * > * > * > * {
   background-color: rgba(255, 0, 255, 0.3);
 } */
 
@@ -147,6 +147,7 @@ a {
 .user-navigation a:active {
   color:rgba(0, 0, 0, 0.3);
 }
+
 /*------------------------------ Slider style --------------------------------  */
 .advantages-slider {
   position: relative;
@@ -545,11 +546,26 @@ a {
 
 /*------------------------------ Catalog style --------------------------------  */
 /*-----------------------------------------------------------------------------  */
+.catalog-grid-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sorting-catalog-wrapper {
+  width: 760px;
+}
+
 .page-title {
   font-size: 55px;
   line-height: 55px;
   font-weight: 500;
   color: #000000;
+}
+
+.page-title-wrapper {
+  width: 760px;
+  margin: 0  auto;
+  padding-left: 30px;
 }
 /*------------------------------ Sorting style --------------------------------  */
 .sorting p {
@@ -576,6 +592,10 @@ a {
   color: #000000;
 }
 /*------------------------------ Filters style --------------------------------  */
+.filters {
+  width: 300px;
+}
+
 .filters legend {
   font-size: 18px;
   line-height: 30px;
@@ -619,7 +639,11 @@ a {
 }
 /*------------------------------ Catalog style --------------------------------  */
 .catalog-list {
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .catalog-item-title {
@@ -627,6 +651,16 @@ a {
   line-height: 30px;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.catalog-item {
+  width: 360px;
+  margin-bottom: 33px;
+  margin-right: 40px;
+}
+
+.catalog-item:nth-child(2n) {
+  margin-right: 0;
 }
 
 .catalog-item > a {
