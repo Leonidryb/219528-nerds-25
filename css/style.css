@@ -169,7 +169,7 @@ input[type="radio"].visually-hidden {
   padding-left: 45px;
 }
 
-.user-basket a:before {
+.user-basket a::before {
   content: "";
 
   position: absolute;
@@ -454,7 +454,7 @@ input[type="radio"].visually-hidden {
   margin-bottom: 24px;
 }
 
-.about-products-list li:before {
+.about-products-list li::before {
   content: "";
 
   position: absolute;
@@ -652,6 +652,7 @@ input[type="radio"].visually-hidden {
 /*------------------------------ Main-footer style --------------------------------  */
 .main-footer {
   padding-top: 62px;
+  padding-bottom: 70px;
 }
 
 .main-footer .container {
@@ -791,6 +792,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  margin-bottom: 80px;
 }
 
 .sorting-catalog-grid-wrapper:nth-of-type(2) {
@@ -996,16 +998,27 @@ input[type="radio"].visually-hidden {
   list-style: none;
 }
 
-.grid-type-option {
-  margin-bottom: 20px;
-  padding-left: 35px;
+.radio-filter {
+  margin-bottom: 25px;
 }
 
-.grid-type-option:nth-of-type(1) {
+.checkbox-filter {
+  margin-bottom: 28px;
+}
+
+.grid-type-option,
+.features-option {
+  margin-bottom: 20px;
+  padding-left: 36px;
+}
+
+.grid-type-option:nth-of-type(1),
+.features-option:nth-of-type(1) {
   margin-top: 16px;
 }
 
-.grid-type-option label {
+.grid-type-option label,
+.features-option label {
   position: relative;
 
   display: block;
@@ -1014,16 +1027,71 @@ input[type="radio"].visually-hidden {
   user-select: none;
 }
 
-.outputarea {
-  line-height: 22px;
-  text-transform: uppercase;
+.grid-type-option label::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -35px;
+
+  width: 25px;
+  height: 25px;
+
+  background-image: url("../img/radio-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  opacity: 0.4;
 }
 
-.outputarea output {
-  background-color: #eeeeee;
+.features-option label::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -35px;
+
+  width: 27px;
+  height: 23px;
+
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  opacity: 0.4;
+}
+
+.grid-type-option label:hover::before,
+.grid-type-option label:focus::before,
+.features-option label:hover::before,
+.features-option label:focus::before {
+  opacity: 1;
+}
+
+.grid-type-option label:focus,
+.features-option label:focus {
+  outline: none;
+}
+
+.grid-type-radio:checked + label::before {
+  background-image: url("../img/radio-on.svg");
+}
+
+.features-checkbox:checked + label::before {
+  background-image: url("../img/checkbox-on.svg");
+}
+
+.grid-type-radio:disabled + label::before,
+.features-checkbox:disabled + label::before {
+  opacity: 0.1;
+}
+
+.grid-type-radio:disabled + label,
+.features-checkbox:disabled + label {
+  color: rgba(40, 49, 54, 0.3);
 }
 
 .filters-button {
+  width: 260px;
+
   color: #000000;
   background-color: #eeeeee;
 }
@@ -1039,6 +1107,10 @@ input[type="radio"].visually-hidden {
   box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
 }
 /*------------------------------ Catalog style --------------------------------  */
+.catalog {
+  margin-bottom: 38px;
+}
+
 .catalog-list {
   display: flex;
   flex-wrap: wrap;
@@ -1055,25 +1127,104 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-item {
+  position: relative;
+
   width: 360px;
   margin-bottom: 33px;
   margin-right: 40px;
+
+  outline: none;
+}
+
+.catalog-item:hover .catalog-info-wrapper,
+.catalog-item:focus .catalog-info-wrapper {
+  visibility: visible;
+}
+
+.catalog-item:hover::before,
+.catalog-item:focus::before {
+  opacity: 1;
 }
 
 .catalog-item:nth-child(2n) {
   margin-right: 0;
 }
 
-.catalog-item > a {
+.catalog-item:nth-last-child(1),
+.catalog-item:nth-last-child(2) {
+  margin-bottom: 0;
+}
+
+.catalog-info-wrapper {
+  position: absolute;
+  bottom: 23px;
+  left: 0;
+
+  box-sizing: border-box;
+  width: 360px;
+  min-height: 231px;
+
+  padding-top: 25px;
+
+  background-color: #eeeeee;
+
+  visibility: hidden;
+}
+
+.catalog-item::before {
+  content: "";
+  position: absolute;
+
+  top: -25px;
+  left: 0;
+
+  width: 360px;
+  height: 40px;
+
+  background-image: url("../img/browser.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  opacity: 0.12;
+}
+
+.catalog-info-wrapper p,
+.catalog-info-wrapper h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-item-title-link {
+  display: block;
+
+  min-width: 220px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+
+  text-align: center;
+}
+
+.catalog-item .catalog-item-info {
+  display: block;
+
+  width: 230px;
+  margin: 0 auto;
+  margin-bottom: 31px;
+
+  text-align: center;
+}
+
+
+.catalog-info-wrapper > a {
   color: #000000;
 }
 
-.catalog-item > a:hover,
-.catalog-item > a:focus {
+.catalog-info-wrapper > a:hover,
+.catalog-info-wrapper > a:focus {
   color: #fb565a;
 }
 
-.catalog-item > a:active {
+.catalog-info-wrapper > a:active {
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -1081,12 +1232,27 @@ input[type="radio"].visually-hidden {
   line-height: 18px;
   color: #666666;
 }
+
+.catalog-button {
+  width: 200px;
+  margin: 0 auto;
+}
 /*------------------------------ Pagination style --------------------------------  */
 .pagination-list {
+  display: flex;
+  margin: 0;
+  margin-bottom: 60px;
+  padding: 0;
+
   list-style: none;
 }
 
 .pagination-item-link {
+  display: block;
+
+  margin-right: 12px;
+  padding: 15px 20px;
+
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
@@ -1096,7 +1262,8 @@ input[type="radio"].visually-hidden {
   background-color: #eeeeee;
 }
 
-.pagination-item-link:hover {
+.pagination-item-link:hover,
+.pagination-item-link:focus {
   background-color: #dfdfdf;
 }
 
@@ -1105,8 +1272,17 @@ input[type="radio"].visually-hidden {
   background-color: #d5d5d5;
 }
 
-.pagination-item-link:focus {
-  border: solid 3px #dbdbdb;
+.curent-pagination-item-link {
+  padding: 12px 17px;
+
+  border: 3px solid #dbdbdb;
+  background-color: #ffffff;
+}
+
+.curent-pagination-item-link:hover,
+.curent-pagination-item-link:active {
+  background-color: #ffffff;
+  box-shadow: none;
 }
 
 .button-pagination {
@@ -1123,4 +1299,8 @@ input[type="radio"].visually-hidden {
   color: #000000;
   background-color: #d5d5d5;
   box-shadow: inset 0px 3px 0 0 rgba(0, 1, 1, 0.1);
+}
+
+.button-pagination {
+  width: 260px;
 }
