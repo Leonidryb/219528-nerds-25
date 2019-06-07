@@ -873,11 +873,16 @@ input[type="radio"].visually-hidden {
 }
 
 /*  Hard filter style*/
+
 .filter-item {
   margin: 0;
   padding: 0;
 
   border: none;
+}
+
+.price-range {
+  margin-bottom: 55px;
 }
 
 .range-filter {
@@ -985,8 +990,28 @@ input[type="radio"].visually-hidden {
 }
 
 .filters ul {
+  margin: 0;
+  padding: 0;
   line-height: 20px;
   list-style: none;
+}
+
+.grid-type-option {
+  margin-bottom: 20px;
+  padding-left: 35px;
+}
+
+.grid-type-option:nth-of-type(1) {
+  margin-top: 16px;
+}
+
+.grid-type-option label {
+  position: relative;
+
+  display: block;
+
+  cursor: pointer;
+  user-select: none;
 }
 
 .outputarea {
