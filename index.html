@@ -217,22 +217,25 @@
   <section class="modal modal-feedback">
     <h2>Напишите нам</h2>
     <form class="feedback-form" method="post">
-      <p class="feedback-form-item">
-        <label for="client-name">Ваше имя</label>
-        <input type="text" name="name" id="client-name" value="" placeholder="Имя Фамилия" required>
-      </p>
-      <p class="feedback-form-item">
-        <label for="client-email">Ваш e-mail:</label>
-        <input type="email" name="email" id="client-email" value="" placeholder="email@example.com" required>
-      </p>
-      <p class="feedback-form-item">
-        <label for="letter-text">Текст письма:</label>
-        <textarea id="letter-text" name="text" placeholder="В свободной форме" rows="4" required></textarea>
-      </p>
-      <button class="button" type="submit">Отправить</button>
+      <div class="form-grid-wrapper">
+        <p class="feedback-form-item">
+          <label for="client-name">Ваше имя:</label>
+          <input type="text" name="name" id="client-name" value="" placeholder="Имя Фамилия" required>
+        </p>
+        <p class="feedback-form-item">
+          <label for="client-email">Ваш e-mail:</label>
+          <input type="email" name="email" id="client-email" value="" placeholder="email@example.com" required>
+        </p>
+        <p class="feedback-form-item">
+          <label for="letter-text">Текст письма:</label>
+          <textarea id="letter-text" name="text" placeholder="В свободной форме" rows="4" required></textarea>
+        </p>
+      </div>
+      <button class="button button-modal" type="submit">Отправить</button>
     </form>
     <button class="button-close" type="button">Закрыть</button>
   </section>
+  <script src="js/popup.js"></script>
 </body>
 
 </html>
