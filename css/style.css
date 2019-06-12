@@ -1202,7 +1202,7 @@ input[type="radio"].visually-hidden {
   user-select: none;
 }
 
-.grid-type-option label::before {
+.grid-type-radio + label::before {
   content: "";
   position: absolute;
   top: -4px;
@@ -1218,7 +1218,7 @@ input[type="radio"].visually-hidden {
   opacity: 0.4;
 }
 
-.features-option label::before {
+.features-checkbox + label::before {
   content: "";
   position: absolute;
   top: -2px;
@@ -1234,15 +1234,15 @@ input[type="radio"].visually-hidden {
   opacity: 0.4;
 }
 
-.grid-type-option label:hover::before,
-.grid-type-option label:focus::before,
-.features-option label:hover::before,
-.features-option label:focus::before {
+.grid-type-radio:hover + label::before,
+.grid-type-radio:focus + label::before,
+.features-checkbox:hover + label::before,
+.features-checkbox:focus + label::before {
   opacity: 1;
 }
 
-.grid-type-option label:focus,
-.features-option label:focus {
+.grid-type-option:focus,
+.features-option:focus {
   outline: none;
 }
 
@@ -1313,7 +1313,7 @@ input[type="radio"].visually-hidden {
 
 .catalog-item:hover .catalog-info-wrapper,
 .catalog-item:focus .catalog-info-wrapper {
-  visibility: visible;
+  opacity: 1;
 }
 
 .catalog-item:hover::before,
@@ -1343,7 +1343,7 @@ input[type="radio"].visually-hidden {
 
   background-color: #eeeeee;
 
-  visibility: hidden;
+  opacity: 0;
 }
 
 .catalog-item::before {
