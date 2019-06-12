@@ -176,8 +176,11 @@ input[type="radio"].visually-hidden {
 }
 
 .site-navigation a:hover,
-.user-navigation a:hover {
+.user-navigation a:hover,
+.site-navigation a:focus,
+.user-navigation a:focus {
   color: #fb565a;
+  outline: none;
 }
 
 .site-navigation a:active,
@@ -310,6 +313,21 @@ input[type="radio"].visually-hidden {
   border: 2px solid #c1c1c1;
   border-radius: 50%;
 }
+
+.slider-controls-radio--1:focus ~ .slider-controls .slider-controls-item--1::after {
+  outline: 2px auto lightblue;
+  outline-offset: -2px;
+}
+
+.slider-controls-radio--2:focus ~ .slider-controls .slider-controls-item--2::after {
+  outline: 2px auto lightblue;
+  outline-offset: -2px;
+}
+
+.slider-controls-radio--3:focus ~ .slider-controls .slider-controls-item--3::after {
+  outline: 2px auto lightblue;
+  outline-offset: -2px;
+}
 /*------------------------------ Products style --------------------------------  */
 .products {
   border-bottom: 2px solid #eeeeee;
@@ -337,6 +355,7 @@ input[type="radio"].visually-hidden {
 }
 
 .products-item .products-item-info {
+  width: 250px;
   margin-bottom: 30px;
 }
 
@@ -764,6 +783,8 @@ input[type="radio"].visually-hidden {
 
   background-color: #ffffff;
   box-shadow: 0px 20px 40px 0 #000101;
+
+  z-index: 1000;
 }
 
 .modal-show {
@@ -1313,7 +1334,7 @@ input[type="radio"].visually-hidden {
 
 .catalog-item:hover .catalog-info-wrapper,
 .catalog-item:focus .catalog-info-wrapper {
-  opacity: 1;
+  visibility: visible;
 }
 
 .catalog-item:hover::before,
@@ -1343,7 +1364,7 @@ input[type="radio"].visually-hidden {
 
   background-color: #eeeeee;
 
-  opacity: 0;
+  visibility: hidden;
 }
 
 .catalog-item::before {
