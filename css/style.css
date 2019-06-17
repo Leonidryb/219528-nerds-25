@@ -638,8 +638,14 @@ input[type="radio"].visually-hidden {
   background-color: #ffffff;
 }
 
-.catalog-map {
+.catalog-responsive-map {
   top: 2573px;
+}
+
+.map-responsive-js iframe {
+  width: 100%;
+
+  border: none;
 }
 /*------------------------------ Main-contacts style --------------------------------  */
 .main-contacts {
