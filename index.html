@@ -6,7 +6,7 @@
   <title>Дизайн-студия Nёrds</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -43,7 +43,7 @@
           <h3 class="visually-hidden">Сроки</h3>
           <p>Долго, дорого, скрупулезно.</p>
           <p>Математически выверенный дизайн<br>
-           для вашего сайта или мобильного приложения.</p>
+            для вашего сайта или мобильного приложения.</p>
           <a class="button" href="#">Узнать больше</a>
         </div>
         <div class="slider-item slide-2">
@@ -55,9 +55,9 @@
         <div class="slider-item slide-3">
           <h3 class="visually-hidden">Удобный режим работы</h3>
           <p>Только ночь,<br>
-             только хардкор</p>
+            только хардкор</p>
           <p>Работать днем, как все? Мы против этого.<br>
-             Ближе к полуночи работа только начинается.</p>
+            Ближе к полуночи работа только начинается.</p>
           <a class="button" href="#">Узнать больше</a>
         </div>
       </section>
@@ -97,7 +97,7 @@
       </ul>
     </section>
 
-    <section class="about-studio">
+    <section class="about-studio container">
       <div class="about-wrapper">
         <h2 class="visually-hidden">Информация о дизайн-студии</h2>
         <h3 class="visually-hidden">Несколько слов о нас</h3>
@@ -159,12 +159,11 @@
         </li>
       </ul>
     </section>
+  </main>
 
-    <section class="map">
+  <section class="map">
+    <div class="container">
       <h2 class="visually-hidden">Как до нас добраться</h2>
-      <div class="map-responsive">
-        <img class="map-noresponsive" src="img/map1160.jpg" width="1160" height="416" alt="Изображение схемы проезда до ул. Большая Конюшенная 19/8, Санкт-Петербург">
-      </div>
       <section class="main-contacts">
         <h2 class="visually-hidden">Наши контакты</h2>
         <p>Nёrds design studio</p>
@@ -177,9 +176,12 @@
         </address>
         <a href="#" class="button feedback-link">Напишите нам</a>
       </section>
-    </section>
-
-  </main>
+      <div class="map-noresponsive">
+        <img class="map-noresponsive" src="img/map2.jpg" width="1440" height="416" alt="Изображение схемы проезда до ул. Большая Конюшенная 19/8, Санкт-Петербург">
+      </div>
+    </div>
+    <iframe class="map-responsive" src="https://yandex.ru/map-widget/v1/?um=constructor%3A27a23e4e9aeca030d3e724f54f6a0e0bee736293a364d377c93f540d4ad8f6ee&amp;source=constructor" height="416"></iframe>
+  </section>
 
   <footer class="main-footer">
     <div class="container">
@@ -238,9 +240,6 @@
     </form>
     <button class="button-close" type="button">Закрыть</button>
   </section>
-  <div class="map-responsive-js">
-    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A27a23e4e9aeca030d3e724f54f6a0e0bee736293a364d377c93f540d4ad8f6ee&amp;source=constructor" height="416"></iframe>
-  </div>
   <script src="js/popup.min.js"></script>
 </body>
 
