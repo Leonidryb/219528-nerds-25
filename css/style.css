@@ -669,7 +669,7 @@ input[type="radio"].visually-hidden {
 
   padding-left: 50px;
   padding-top: 49px;
-  padding-right: 65px;
+  padding-right: 50px;
   padding-bottom: 40px;
 
   z-index: 10;
@@ -690,6 +690,7 @@ input[type="radio"].visually-hidden {
 }
 
 .main-contacts address {
+  width: 210px;
   padding-left: 2px;
   margin-bottom: 36px;
 
@@ -1383,7 +1384,7 @@ input[type="radio"].visually-hidden {
   padding: 9px 10px;
   margin-left: 9px;
 
-  font-family: Roboto, Arial, sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   text-align: center;
   color: #283136;
@@ -1627,7 +1628,7 @@ input[type="radio"].visually-hidden {
 .catalog-item-title-link {
   display: block;
 
-  min-width: 220px;
+  min-width: 176px;
   margin: 0 auto;
   margin-bottom: 15px;
 
